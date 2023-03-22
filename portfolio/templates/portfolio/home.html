@@ -1,4 +1,9 @@
-<h1>HOME PAGE</h1>
+<h1>Mirbek's Portfolio</h1>
+
+{% load static %}
+
+<a href="{% static 'portfolio/download.pdf' %}">Pikachu</a>
+<img src="{% static 'portfolio/me.png' %}" />
 
 {% for project in projects %}
 
@@ -6,5 +11,4 @@
 <p>{{ project.description }}</p>
 <img src="{{project.image.url }}" />
 {% if project.url %}
-<br /><a href="{{project.url}}">Link</a>
-{% endif %} {% endfor %}
+<br /><a href="{{project.url}}">Link</a> {% endif %} {% endfor %}
